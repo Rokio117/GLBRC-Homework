@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def home
-    @applications = Apps.all
+    @apps = App.all
   end
 end

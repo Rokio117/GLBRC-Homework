@@ -1,2 +1,18 @@
-<h1>Success</h1>
-<p>Find me in app/views/home/home.html.erb</p>
+<h1>App-etizer</h1>
+<button class="add-more-button">Add More</button>
+<div class="grid-container">
+<% @apps.each do |app| %>
+  <div class="app-container" >
+  <button class="remove-button"></button>
+  <div class="content-container">
+    <a href="<%= app.link %>" class="app-name"><%= app.name %></a>
+    <img class="app-image" src="<%= app.image %>"></img>
+    <p><%= app.description %></p>
+    </div>
+    
+  
+  </div>
+
+  <% end %>
+  <div>
+
