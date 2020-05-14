@@ -3,8 +3,12 @@ class LoginController < ApplicationController
     @users = User.all
     @user_apps = UserApp.all
   end
-  def submit
-    @user = User.find(params[:id])
-    
+
+
+  
+
+  def show
+    @user = User.find_by(login: params[:login])
   end
+ 
 end

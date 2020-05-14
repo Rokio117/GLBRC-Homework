@@ -1,26 +1,13 @@
 <h1>Login#login</h1>
 
- 
-<form>
-<label for="user-input">Login name:</label>
-  <input type="text" class="user-input"></input>
-  <br></br>
-  <label for="password-input">Password:</label>
-  <input type="text" class="password-input"></input>
-  <br></br>
-  <button type="submit">Submit</button>
-</form>
+ <% @users.each do |u| %>
+  <div><%= u.login %></div>
+  <%= u.password %>
+  <% end %>
 
-<% form_for @submit do |f|%>
-  <% f.submit %>
-<% end %>
+<h1>Login</h1>
 
-<% @users.each do |user| %>
-  <div><%= user.login %></div>
-<% end %>
 
-<% if @user_apps%>
-  <div>@user_apps</div>
-<% else %>
-<div>There are no user apps</div>
-<% end %>
+<button id="click">click meeeee</button>
+<p id="shower"></p>
+
