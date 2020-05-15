@@ -8,7 +8,10 @@
 <div class="grid-container">
 <% $defaultApps.each do |app| %>
   <div class="app-container" >
+  <form action = "home/delete">
+  <input type = "hidden" name="id" value = "<%= app.id%>"></input>
   <button class="remove-button"></button>
+  </form>
   <div class="content-container">
     <a href="<%= app.link %>" class="app-name"><%= app.name %></a>
     <img class="app-image" src="<%= app.image %>"></img>

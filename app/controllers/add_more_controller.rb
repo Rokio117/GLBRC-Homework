@@ -5,7 +5,7 @@ class AddMoreController < ApplicationController
   def addApps
     
     params.each do |id|
-      $apps.map { |app| $defaultApps.push(app) if app.id === id }
+      $apps.map { |app| $defaultApps.push(app) if app.id == id }
       
     end
     redirect_to '/home'
