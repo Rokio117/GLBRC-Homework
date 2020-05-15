@@ -1,6 +1,6 @@
 <h1>Add</h1>
 
-<form>
+<form action="/add_more/addApps">
 <div class="grid-container">
   <% $nonDefaultApps.each do |app| %>
     <div class="app-container" >
@@ -16,10 +16,10 @@
 
 
   <% end %>
-</div<
-
+</div>
+<button type="submit">Submit</button>
 </form>
 
-<form>
-<button type="submit" action="/back">Cancel</button>
+<form action="/add_more/cancel">
+<button type="submit" >Cancel</button>
 </form>
