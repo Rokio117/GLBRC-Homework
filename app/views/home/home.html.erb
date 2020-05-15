@@ -7,15 +7,16 @@
 
 <div class="grid-container">
 <% $defaultApps.each do |app| %>
-  <div class="app-container" >
-  <form action = "home/delete">
+  <div class="app-container grow" >
+  <form >
   <input type = "hidden" name="name" value = "<%= app.name%>"></input>
   <button class="remove-button"></button>
   </form>
   <div class="content-container">
-    <a href="<%= app.link %>" class="app-name" target="blank"><%= app.name %></a>
+    <a href="<%= app.link %>" class="app-name" target="blank"><%= app.name %>
     <img class="app-image" src="<%= app.image %>"></img>
-    <p><%= app.description %></p>
+    <p class="app-description"><%= app.description %></p>
+    </a>
     </div>
     
   
@@ -23,10 +24,7 @@
 
   <% end %>
   </div>
-  <br></br>
-  <p><%=$user.login %></p>
-  <p><%=$user.id %></p>
-  <p><%= $userApps %></p>
+ 
 
   
 

@@ -1,14 +1,15 @@
 <h1>Add</h1>
 
-<form action="/add_more/addApps">
+<form action="/add_more/cancel">
 <div class="grid-container">
   <% $nonDefaultApps.each do |app| %>
-    <div class="app-container" >
+    <div class="app-container grow" >
   <input type="checkbox" id="<%= app.name %>"></input>
   <div class="content-container">
-    <a href="<%= app.link %>" class="app-name"><%= app.name %></a>
+    <a href="<%= app.link %>" class="app-name" target="blank"><%= app.name %>
     <img class="app-image" src="<%= app.image %>"></img>
-    <p><%= app.description %></p>
+    <p class='app-description'><%= app.description %></p>
+    </a>
     </div>
     
   
@@ -16,10 +17,12 @@
 
 
   <% end %>
-</div>
-<button type="submit">Submit</button>
+</div >
+<div class="button-container">
+<button type="submit" class='submit-button'>Submit</button>
 </form>
 
 <form action="/add_more/cancel">
-<button type="submit" >Cancel</button>
+<button type="submit" class='cancel-button'>Cancel</button>
 </form>
+</div>

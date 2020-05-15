@@ -1,17 +1,14 @@
-<h1>Login#login</h1>
+<h1>App-Etizer</h1>
 
- <% @users.each do |u| %>
-  <div><%= u.login %></div>
-  <%= u.password %>
-  <% end %>
+ 
 
 <h1>Login</h1>
 
 
-<form action="/login/submit">
-  <label>Login:</label>
-  <input name="login"class="login-input"></input>
-  <label>Password:</label>
-  <input name="password" class="password-input"></input>
-  <button type="submit">Submit</button>
+<form action="/login/submit" class='login-form'>
+  <label class='login-label' ></label>
+  <input name="login"class="login-input" placeholder="Login"></input>
+  <label class='login-label' ></label>
+  <input name="password" class="password-input" placeholder="password" type="password"></input>
+  <button type="submit" class="login-submit-button">Submit</button>
 </form>
