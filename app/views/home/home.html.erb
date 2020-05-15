@@ -1,7 +1,7 @@
 <h1>App-etizer</h1>
 <button class="add-more-button">Add More</button>
 <div class="grid-container">
-<% @apps.each do |app| %>
+<% @defaultApps.each do |app| %>
   <div class="app-container" >
   <button class="remove-button"></button>
   <div class="content-container">
@@ -14,7 +14,11 @@
   </div>
 
   <% end %>
-  <div>
+  </div>
+  <br></br>
+  <p><%=$user.login %></p>
+  <p><%=$user.id %></p>
+  <p><%= $userApps %></p>
 
   
 
