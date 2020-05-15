@@ -3,12 +3,15 @@ class HomeController < ApplicationController
   end
 
   def delete
-    @removeApp =
-   $apps.map {|app| @removeApp = app if app.name == params[:name]}
-   $nonDefaultApps.push(@removeApp[0])
-   $newDefaultApps = []
-   $defaultApps.map {|app| defaultApps.push(app) if app.name != @removeApp.name}
-   $defaultApps = @newDefaultApps
+   
+    @removeApp = []
+   $apps.map {|app| if app.name == params[:name]
+    @removeApp.push(app)
+  end }
+   $nonDefaultApps.push(@removeApp)
+   $defaultApps.delete(@removeApp)
+   puts @removeApp
+   redirect_to '/home'
   end
 
 

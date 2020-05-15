@@ -2,7 +2,7 @@ class LoginController < ApplicationController
   def login
     @users = User.all
     @user_apps = UserApp.all
-    
+   
   end
 
 
