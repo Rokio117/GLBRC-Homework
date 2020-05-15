@@ -9,7 +9,7 @@
 <% $defaultApps.each do |app| %>
   <div class="app-container" >
   <form action = "home/delete">
-  <input type = "hidden" name="id" value = "<%= app.id%>"></input>
+  <input type = "hidden" name="name" value = "<%= app.name%>"></input>
   <button class="remove-button"></button>
   </form>
   <div class="content-container">
