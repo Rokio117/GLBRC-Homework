@@ -1,2 +1,19 @@
-<h1>AddMore#add_more</h1>
-<p>Find me in app/views/add_more/add_more.html.erb</p>
+<h1>Add</h1>
+<form>
+  <% $nonDefaultApps.each do |app| %>
+    <div class="app-container" >
+  <input type="checkbox" id="<%= app.id %>"></input>
+  <div class="content-container">
+    <a href="<%= app.link %>" class="app-name"><%= app.name %></a>
+    <img class="app-image" src="<%= app.image %>"></img>
+    <p><%= app.description %></p>
+    </div>
+    
+  
+  </div>
+
+
+  <% end %>
+
+
+</form>

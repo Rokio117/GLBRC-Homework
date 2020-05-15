@@ -1,13 +1,13 @@
 class HomeController < ApplicationController
   def home
     @apps = App.all
-    @defaultApps = []
-    @nonDefaultApps = []
+    $defaultApps = []
+    $nonDefaultApps = []
     @apps.each do |app|
       if app.defaultStatus
-        @defaultApps.push(app)
+        $defaultApps.push(app)
       else
-        @nonDefaultApps.push(app)
+        $nonDefaultApps.push(app)
       end
     end
   end
