@@ -1,7 +1,12 @@
 <h1>App-etizer</h1>
-<button class="add-more-button">Add More</button>
+
+<form action="/add_more">
+<button class="add-more-button" type="submit" >Add More</button>
+</form>
+
+
 <div class="grid-container">
-<% @defaultApps.each do |app| %>
+<% $defaultApps.each do |app| %>
   <div class="app-container" >
   <button class="remove-button"></button>
   <div class="content-container">

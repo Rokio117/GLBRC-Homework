@@ -1,5 +1,7 @@
 <h1>Add</h1>
+
 <form>
+<div class="grid-container">
   <% $nonDefaultApps.each do |app| %>
     <div class="app-container" >
   <input type="checkbox" id="<%= app.id %>"></input>
@@ -14,6 +16,10 @@
 
 
   <% end %>
+</div<
 
+</form>
 
+<form>
+<button type="submit" action="/back"></button>
 </form>
